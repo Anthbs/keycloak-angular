@@ -285,6 +285,7 @@ export class KeycloakService {
         resolve(this.instance.token);
       } catch (error) {
         this.login();
+        reject(error);
       }
     });
   }
